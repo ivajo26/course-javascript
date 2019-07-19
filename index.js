@@ -1,3 +1,9 @@
 let array1 = [30,60,70,20,45]
 
-console.log(array1.length)
+let suma = 0
+for(let i = 0; i < array1.length; i++) {
+    // console.log(`La posicion ${i} tiene el valor ${array1[i]}`)
+    suma += array1[i]
+}
+
+console.log(`El valor total de la suma es ${suma}`)
