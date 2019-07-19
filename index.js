@@ -1,18 +1,11 @@
-function residuo() {
-    // console.log("El residuo de 11 / 2 = ", 11 % 2)
-    function text() {
-        return "El residuo es = "
-    }
-    let value = 11 % 2
-    return value
-}
-
-let residuo2 = function() {
-    return 11 % 2
+function esPar(value) {
+    const residuo = value % 2
+    return `${value} - ${residuo === 0 ? "Es par" : "Es Impar"} -> Esto es con template Strings`
 }
 
 
-for(let i = 0; i <= 10; i++) {
-    let result = residuo()
-    console.log(text(), result)
+
+for(let i = 1; i <= 20; i++) {
+    let result = esPar()
+    console.log(result)
 }
