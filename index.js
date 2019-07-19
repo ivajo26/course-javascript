@@ -1,15 +1,13 @@
-for(let i = 20; i >= 10; i--) {
-    console.log(i)
+function residuo() {
+    // console.log("El residuo de 11 / 2 = ", 11 % 2)
+    return 11 % 2
 }
 
-let j = 0
-
-while(j <= 3) {
-    console.log(j);
-    j += 4
+let residuo2 = function() {
+    return 11 % 2
 }
 
-do {
-    console.log(j);
-    j += 4
-} while(j <= 3)
+for(let i = 0; i <= 10; i++) {
+    let result = residuo2()
+    console.log("El residuo de 11 / 2 = ", result)
+}
