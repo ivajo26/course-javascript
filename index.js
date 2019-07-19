@@ -1,11 +1,15 @@
-function esPar(value) {
-    const residuo = value % 2
-    return `${value} - ${residuo === 0 ? "Es par" : "Es Impar"} -> Esto es con template Strings`
+function Animal(name) {
+    this.nombre = name
+    const ref = this
+    setTimeout(() => {
+        console.log(`${this.nombre} esta ladrando`)
+    }, 2000)
 }
 
+let miMascota = new Animal("Sasha")
+let miMascota2 = new Animal("Brako")
 
+console.log(miMascota.nombre)
+console.log(miMascota2.nombre)
 
-for(let i = 1; i <= 20; i++) {
-    let result = esPar()
-    console.log(result)
-}
+let nombre = () => {}
