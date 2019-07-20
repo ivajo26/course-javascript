@@ -1,3 +1,3 @@
-console.log("Primer console")
-setTimeout(() => console.log("Segundo console"), 2000)
-console.log("Tercero console")
+fetch('https://jsonplaceholder.typicode.com/todos/1')
+  .then(response => response.json())
+  .then(json => console.log(json))
