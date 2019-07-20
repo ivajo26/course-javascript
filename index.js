@@ -1,17 +1,17 @@
-function function1() {
+function function1(message, time) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            reject("Hola")
-        }, 2000)
+            resolve(message)
+        }, time)
     })
-    
-    // return "Hola"
+
 }
 
-function function2(text) {
-    console.log(text)
-}
+let todos = Promise.all([
+    function1("Function 1", 2000),
+    function1("Function 2", 1000),
+    function1("Function 3", 5000),
+    function1("Function 4", 3000)
+])
 
-function1()
-.then((value) => {function2(value)})
-.catch((err) => {console.log(err)})
+console.log(todos)
