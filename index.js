@@ -1,12 +1,5 @@
-function function1(message, time) {
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve(message)
-        }, time)
-    })
-
-}
-
+import function1 from 'funciones.js'
+const function1 = require('funciones.js')
 async function ejecutando() {
     let [fun1, fun2, fun3, fun4] = await Promise.all([
         function1("Function 1", 2000),
